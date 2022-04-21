@@ -17,7 +17,7 @@ const Login = () => {
   };
 
   return (
-    <div class="content">
+    <div class="content-login">
       <Form
         name="basic"
         labelCol={{
