@@ -30,10 +30,10 @@ button, .content-login .ant-btn-primary{
 
   .content-login .ant-form-item-control-input-content input{
       color:#61dafb;
-      background-color: #094D36;
+      background-color: #535353;
   }
 
   .content-login .ant-form-item-control-input-content .ant-input-affix-wrapper.ant-input-password, .content-login .ant-input-suffix .ant-input-password-icon.anticon{
     color:#61dafb;
-    background-color: #094D36;
+    background-color: #535353;
   }

@@ -23,7 +23,7 @@ $white: rgb(243, 243, 243);
 }
 
 body {
-  background: #094D36;
+  background: linear-gradient(#000, #e3e3e3);
   font-family: $font-1;
   // @include verticalCenter;
 }
