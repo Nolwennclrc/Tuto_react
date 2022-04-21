@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { UserContext } from "../context/UserContext";
 
 const Navigation = () => {
+  const { user, setUser } = useContext(UserContext);
+
   return (
     <div className="navigation">
       <ul>
@@ -14,12 +17,17 @@ const Navigation = () => {
         >
           <li>A propos</li>
         </NavLink>
-        <NavLink
-          to="/logout"
-          className={(nav) => (nav.isActive ? "nav-active" : "")}
-        >
-          <li>Déconnexion</li>
-        </NavLink>
+
+        {user ? (
+          <NavLink
+            to="/logout"
+            className={(nav) => (nav.isActive ? "nav-active" : "")}
+          >
+            <li>Déconnexion</li>
+          </NavLink>
+        ) : (
+          ""
+        )}
       </ul>
     </div>
   );
