@@ -7,18 +7,20 @@ import { UserContext } from "../context/UserContext";
 const Logout = () => {
   const { user, setUser } = useContext(UserContext);
   return (
-    <div class="content">
+    <div>
       <Logo />
       <Navigation />
-      <h1>Se déconnecter</h1>
+      <div class="content">
+        <h1>Se déconnecter</h1>
 
-      {user ? (
-        <NavLink to="/home">
-          <button onClick={() => setUser(null)}>Déconnexion</button>
-        </NavLink>
-      ) : (
-        "tu dois être connecté"
-      )}
+        {user ? (
+          <NavLink to="/">
+            <button onClick={() => setUser(null)}>Déconnexion</button>
+          </NavLink>
+        ) : (
+          "tu dois être connecté"
+        )}
+      </div>
     </div>
   );
 };
